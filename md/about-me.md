@@ -2,7 +2,7 @@
 
 ## 장한나🌟 입니다.
 
-## ![장한나](./assets/md/picture_scenery.jpg)
+## ![장한나](./images/picture_scenery.jpg)
 
 ---
 
