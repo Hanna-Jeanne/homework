@@ -144,14 +144,14 @@ body {
         margin-right: 0.3125rem;
         margin-inline-end: 0.3125rem;
         /* background-color: lime; */
-        background-image: url(./../../assets/login/Checkbox\ \(unchecked\).svg);
+        background-image: url(./../../assets/login/checkbox_unchecked.svg);
         background-size: 24px 24px;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         vertical-align: bottom;
       }
       .login_status_input[type="checkbox"]:checked + label::before {
-        background-image: url(./../../assets/login/Checkbox\(checked\).svg);
+        background-image: url(./../../assets/login/checkbox_checked.svg);
       }
     }
 
