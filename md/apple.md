@@ -2,7 +2,7 @@
 
 ---
 
-▶️ homwork 저장소 배포 주소 :
+▶️ homwork 저장소 배포 주소 : [애플 과제 페이지](https://hanna-jeanne.github.io/homework/apple/apple.html)
 
 ### - apple 마크업
 이번 과제를 하면서 마크업 부분에서는 딱히 어려움이 없었던 것 같습니다.  
