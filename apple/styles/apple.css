@@ -1,3 +1,217 @@
-@import url(card-component.css);
+@import url(./reset.css);
+@import url(./base.css);
+@import url(./theme.css);
 
 /* 카드 레이아웃 */
+.apple-card {
+  inline-size: 100%;
+  block-size: var(--size, 31.25rem);
+  padding-block-start: var(--large-spacing);
+  text-align: center;
+  
+  h2 {
+    font-size: var(--large-text);
+    margin-block-end: var(--small-spacing);
+  }
+
+  p {
+    font-size: var(--base-text);
+    line-height: var(--line-normal);
+    margin-block-end: var(--small-spacing);
+
+    .release_date {
+      display: block;
+      font-size: var(--small-text);
+      color: var(--gray);
+      margin-block-start: var(--x-small-spacing);
+    }
+  }
+
+  .info-view {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--base-spacing);
+    font-size: var( --xx-small-text);
+
+    .btn {
+      background-color: transparent;
+      padding: var(--x-small-spacing) var(--small-spacing);
+      border: 0;
+      border-radius: 15rem;
+
+      a {
+        inline-size: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+.apple-card.card_black {
+  h2 {
+    color: var(--white);
+  }
+
+  p {
+    color: var(--white);
+  }
+
+  .info-view {
+    .btn {
+      color: var(--blue-300);
+      border: 1px solid var(--blue-300);
+    }
+    .btn:focus {
+      background-color: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+
+.apple-card.card_white {
+  h2 {color: var(--black);}
+
+  p {
+    color: var(--black);
+  }
+
+  .info-view {
+    .btn {
+      color: var(--black);
+      border: 1px solid var(--black);
+    }
+    .btn:focus {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}
+
+/* 그리드 레이아웃, 미디어쿼리 */
+.apple-page {
+  inline-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  row-gap: 0.75rem;
+
+  .apple-card {
+    grid-column: 1 / span 2;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+  }
+
+  .apple-card.ipad_pro {
+    background-image: url(./../products/ipad_pro.jpeg);
+  }
+
+  .apple-card.ipad_air {
+    background-image: url(./../products/ipad_air.jpeg);
+  }
+
+  .apple-card.iphone_15_pro {
+    background-image: url(./../products/iphone15_pro.jpeg);
+  }
+
+  .apple-card.iphone_15 {
+    background-image: url(./../products/iphone15.jpeg);
+  }
+
+  .apple-card.watch {
+    background-image: url(./../products/apple_watch.jpeg);
+  }
+
+  .apple-card.macbook_air {
+    background-image: url(./../products/macbook_air.jpeg);
+  }
+
+  .apple-card.airpods_pro {
+    background-image: url(./../products/airpods_pro.jpeg);
+  }
+
+  @media (min-width: 600px) {
+
+    .apple-card.ipad_pro {
+      background-image: url(./../products/ipad_pro_2x.jpeg);
+    }
+
+    .apple-card.ipad_air {
+      background-image: url(./../products/ipad_air_2x.jpeg);
+    }
+
+    .apple-card.iphone_15_pro {
+      background-image: url(./../products/iphone15_pro_2x.jpeg);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    column-gap: 0.75rem;
+
+    .apple-card {
+      padding-block-start: var(--extra-large-spacing);
+    }
+
+    .apple-card.ipad_pro {
+      grid-column: 1 / span 2;
+
+      background-image: url(./../products/ipad_pro_wide.jpeg);
+    }
+
+    .apple-card.apple-card.ipad_air {
+      grid-column: 1 / span 2;
+
+      background-image: url(./../products/ipad_air_wide.jpeg);
+      background-size: auto;
+      background-position: center top;
+    }
+
+    .apple-card.iphone_15_pro {
+      grid-column: 1 / span 2;
+
+      background-image: url(./../products/iphone15_pro_wide.jpeg);
+    }
+
+    .apple-card.iphone_15 {
+      grid-column: 1 / 2;
+
+      background-image: url(./../products/iphone15_2x.jpeg);
+    }
+
+    .apple-card.watch {
+      grid-column: 2 / 3;
+
+      background-image: url(./../products/apple_watch_2x.jpeg);
+    }
+
+    .apple-card.macbook_air {
+      grid-column: 1 / 2;
+
+      background-image: url(./../products/macbook_air_2x.jpeg);
+    }
+
+    .apple-card.airpods_pro {
+      grid-column: 2 / 3;
+
+      background-image: url(./../products/airpods_pro_2x.jpeg);
+    }
+  }
+
+  @media (min-width: 1352px) {
+    .apple-card.ipad_pro {
+      background-image: url(./../products/ipad_pro_wide_2x.jpeg);
+    }
+
+    .apple-card.ipad_air {
+      background-image: url(./../products/ipad_air_wide_2x.jpeg);
+    }
+
+    .apple-card.iphone_15_pro {
+      background-image: url(./../products/iphone15_pro_wide_2x.jpeg);
+    }
+  }
+}
+
